@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp start",
+    "build": "gulp build",
     "test": "vows --spec"
   },
   "author": "",

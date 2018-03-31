@@ -7,16 +7,15 @@ notifications:
     on_success: change
 addons:
   ssh_known_hosts:
-  - 123.45.56.78
+  - fumes.com.br
 branches:
   only:
   - master
 env:
   global:
-  - REMOTE_APP_DIR=/srv/fumes.travis.com.br/
+  - REMOTE_APP_DIR=/srv/fumes.com.br/
   - REMOTE_USER=deploy
   - REMOTE_HOST=fumes.com.br
-  - PORT=8080
 before_install:
 - openssl aes-256-cbc -K $encrypted_9aaa1c87a687_key -iv $encrypted_9aaa1c87a687_iv
   -in deploy.enc -out deploy -d
