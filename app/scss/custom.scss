@@ -1,0 +1,789 @@
+// .overlay {
+//   display: none;
+// }
+.modal-header {
+  background: $dark-purple;
+  color: $white;
+}
+a {
+  &:focus {
+    outline: none;
+  }
+}
+.sdm-bg {
+  color: $white;
+  background: $purple;
+  // @include gradient-horizontal($gradient_color_2, $gradient_color_1, 0%, 100%);
+  position: relative;
+  .overlay{
+    position: absolute;
+    width: 100%;
+    height: 140px;
+    bottom: 0;
+    opacity: 0.5;
+    background: 
+    linear-gradient(30deg, $purple 12%, transparent 12.5%, transparent 87%, $purple 87.5%, $purple 0), 
+    linear-gradient(150deg, $purple 12%, transparent 12.5%, transparent 87%, $purple 87.5%, $purple 0), 
+    linear-gradient(30deg, $purple 12%, transparent 12.5%, transparent 87%, $purple 87.5%, $purple 0), 
+    linear-gradient(150deg, $purple 12%, transparent 12.5%, transparent 87%, $purple 87.5%, $purple 0), 
+    linear-gradient(60deg, lighten($purple, 7%) 25%, transparent 25.5%, transparent 75%, lighten($purple, 7%) 75%, lighten($purple, 7%) 0), 
+    linear-gradient(60deg, lighten($purple, 7%) 25%, transparent 25.5%, transparent 75%, lighten($purple, 7%) 75%, lighten($purple, 7%) 0), $dark-purple;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+    background-size: 80px 140px;
+  }
+
+  .profile_picture {
+    width: 145px;
+    height: 145px;
+  }
+  ul {
+    &.menu-center {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      li {
+        a {
+          padding-top: 0;
+          font-size: $font-size-base;
+          font-family: $font-open;
+          font-weight: 700;
+          text-transform: uppercase;
+          display: inline-block;
+          position: relative;
+          &:after {
+            content: '';
+            display: block;
+            margin: 10px auto auto auto;
+            height: 3px;
+            width: 0px;
+            background: transparent;
+            transition: width .5s ease, background-color .5s ease;
+          }
+          &:hover {
+            &:after {
+              width: 100%;
+              background: $white;
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
+
+.scroll-nav {
+  li {
+    a {
+      &.sdm-active {
+        background: $white;
+        color: $purple ;
+        height: 20px;
+        border-radius: 5px;
+        animation: grow .25s ease;
+      }
+    }
+    &.active {
+      a {
+        background: transparent;
+        color: $white;  
+      }
+    }
+  }
+
+}
+hr { 
+  border : 0;
+  height: 3px; 
+  background: $white;
+  width: 30px;    
+}
+.margin-top-100 {
+  margin-top: 100px;
+}
+.margin-bottom-135 {
+  margin-bottom: 135px;
+} 
+.margin-top-30 {
+  margin-top: $font-size-h2;
+}
+.margin-bottom-18 {
+  margin-bottom: $font-size-h4;
+}
+
+.filter-btns {
+  .nav-pills {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    li {
+      a {
+        &.programs-btn-active {
+          color: $color-orange;
+          border-bottom: 2px solid $color-orange;
+        }
+      }
+    }
+  }
+
+}
+.position-relative {
+  position: relative;
+  top: -50px;
+  .position-absolute {
+    background: $white;
+    border-radius: 20px;
+  }
+}
+.filter-btns {
+  .nav-pills {
+    li {
+      a {
+        padding-top: $font-size-h1;
+        padding-bottom: $font-size-h2;
+        font-weight: 700;
+        padding-left: 0;
+        padding-right: 0;
+        text-transform: uppercase;
+        margin-left: $font-size-h3;
+        margin-right: $font-size-h3;
+        font-size: $font-size-base;
+        color: $color-grey;
+        border-bottom: 2px solid transparent;
+        &:hover {
+          animation: grow .3s ease-in-out;
+          border-bottom: 2px solid;
+        }
+      }
+    }
+  }
+}
+
+#mix-wrapper {
+  margin-top: 40px;
+  margin-bottom: 78px;
+  #effect-5 {
+    .mix-target {
+      margin-bottom: $font-size-h3;
+      padding-left: $font-size-small;
+      padding-right: $font-size-small;
+    }
+
+  }
+}
+@keyframes grow {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+#about_me {
+  padding-top: 90px;
+  padding-bottom: 69px;
+  h3 {
+    color: $color-orange;
+    text-transform: capitalize;
+    i {
+      margin-right: $font-size-base;
+    }
+  }
+  p {
+    font-size: $font-size-large;
+    font-weight: 300;
+  }
+}
+.block {
+  margin-top: 26px;
+  margin-bottom: 26px;
+  h4 {
+    color: $gray;
+    margin-bottom: $font-size-base;
+  }
+  p {
+    color: $gray;
+  }
+}
+.icon-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: $color-light-grey;
+  li {
+    margin-bottom: $font-size-base;
+  }
+  i {
+    margin-right: $font-size-base;
+  }
+}
+#expertness {
+  padding-top: 89px;
+  padding-bottom: 74px;
+  h3 {
+    font-weight: 700;
+    i {
+      margin-right: $font-size-base;
+    }
+  }
+  .block {
+    h4,p {
+      color: $white;
+    }
+  }
+  .container {
+    .row {
+      .col-sm-4 {
+        padding-right: $font-size-small;
+        padding-left: $font-size-small;
+      }
+    }
+  }
+}
+#hire_me {
+  margin-top: 90px;
+  margin-bottom: 90px;
+  i {
+    color: $color-orange;
+    // background: -webkit-linear-gradient($gradient_color_2, $gradient_color_1);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+  }
+  h3 {
+    margin-top: 0;
+    margin-bottom: $font-size-large;
+  }
+  h4 {
+    margin-top: 0;
+    margin-bottom: $font-size-h1;
+  }
+}
+.margin-top-55 {
+  margin-top: 55px;
+}
+.margin-bottom-55 {
+  margin-bottom: 55px;
+}
+.margin-top-76 {
+  margin-top: 76px;
+}
+.btn-orange {
+  background: $color-orange;
+  padding: 15px 30px;
+  border: 2px solid $color-orange;
+  transition: all 0.5s ease-out;
+  font-weight: 700;
+  text-transform: uppercase;
+  &:hover {
+    background: $white;
+    color: $color-orange;
+  }
+}
+
+#contact_me {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  .block {
+    h4 {
+      color: $white;
+    }
+  }
+  h3 {
+    margin-top: 0;
+    font-weight: 700;
+  }
+  form {
+    margin-top: $font-size-h2;
+    margin-bottom: $font-size-h2;
+    .form-group {
+      input::-webkit-input-placeholder {
+        color: $pink;
+      }
+
+    input:-moz-placeholder { /* Firefox 18- */
+      color: $pink;  
+    }
+
+    input::-moz-placeholder {  /* Firefox 19+ */
+      color: $pink;  
+    }
+
+    input:-ms-input-placeholder {  
+      color: $pink;  
+    }
+    textarea::-webkit-input-placeholder {
+      color: $pink;
+    }
+
+    textarea:-moz-placeholder { /* Firefox 18- */
+      color: $pink;  
+    }
+
+    textarea::-moz-placeholder {  /* Firefox 19+ */
+      color: $pink;  
+    }
+
+    textarea:-ms-input-placeholder {  
+      color: $pink;  
+    }
+  }
+  label {
+    font-size: $font-size-base;
+    font-weight: 300;
+  }
+  .form-control {
+    background: transparent;
+    border:0;
+    color: $white;
+    border-radius: 0;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid $white;
+    box-shadow: none;
+    transition: all 0.5s ease;
+    &:focus {
+      border-top: 2px solid $white;
+      border-left: 2px solid $white;
+      border-right: 2px solid $white;
+
+    }
+  }
+
+}
+}
+/* ------------------------------------------------------------ *\
+|* ------------------------------------------------------------ *|
+|* Figures
+|* ------------------------------------------------------------ *|
+\* ------------------------------------------------------------ */
+.modal-title {
+  font-weight: 700;
+}
+.modal-body {
+  img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+figure {
+  margin: 0;
+  position: relative;
+  img {
+    display: block;
+    position: relative;
+    z-index: 10;
+    max-width: 100%;
+    height: auto;
+  }
+  figcaption {
+    display: block;
+    position: absolute;
+    z-index: 5;
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  h3 {
+    color: #fff;
+  }
+  span {
+    color: $white;
+  }
+}
+
+// figure a.close-caption {
+//   display: block;
+//   position: absolute;
+//   width: 44px;
+//   height: 44px;
+//   text-align: center;
+//   line-height: 44px;
+//   font-size: 24px;
+//   font-weight: 700;
+//   color: #315a7d;
+// }
+// figure a.close-caption.hidden {
+//   display: none
+// }
+/* ------------------------------------------------------------ *\
+|* ------------------------------------------------------------ *|
+|* Effect 5
+|* ------------------------------------------------------------ *|
+\* ------------------------------------------------------------ */
+#effect-5 figure a.close-caption {
+  bottom: 10px;
+  left: 10px;
+}
+#effect-5 figure figcaption {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: $purple;
+  // @include gradient-horizontal($gradient_color_2, $gradient_color_1, 0%, 100%);
+  padding: 20px;
+  text-align: center;
+  text-transform: capitalize;
+}
+#effect-5 figure img {
+  transition: all 0.5s;
+}
+// .no-touch
+#effect-5 figure:hover img,
+#effect-5 figure.hover img {
+  transform: rotate(-360deg) scale(0);
+}
+/* ------------------------------------------------------------ *\
+|* ------------------------------------------------------------ *|
+|* Slider
+|* ------------------------------------------------------------ *|
+\* ------------------------------------------------------------ */
+/* Carousel */
+.carousel {
+  margin-top: 90px;
+  margin-bottom: 90px;
+  ol {
+    margin-bottom: 0;
+  }
+}
+#quote-carousel .carousel-control {
+  background: none;
+  color: $pink;
+  text-shadow: none;
+  margin-top: 30px;
+}
+
+#quote-carousel .carousel-indicators {
+  right: 50%;
+  top: auto;
+  bottom: 0px;
+  margin-right: -19px;
+}
+#quote-carousel .carousel-indicators li {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  cursor: pointer;
+  border: 4px solid $white;
+  border-radius: 50px;
+  opacity: 0.4;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+#quote-carousel .carousel-indicators .active {
+  background: #333333;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  border-color: $color-orange;
+  opacity: 1;
+  overflow: hidden;
+}
+.carousel-inner {
+  min-height: 300px;
+}
+.item blockquote {
+  border-left: none;
+  margin: 0;
+}
+.item blockquote {
+  p {
+    font-size: $font-size-large;
+    position: relative;
+    z-index: 100;
+    &:before {
+      position: absolute;
+      content: "\f10d";
+      font-family: 'Fontawesome';
+      font-size: 100px;
+      z-index: 48;
+      opacity: 0.2;
+      top: -35px;
+      left: -10px;
+    }
+  }
+}
+
+// fix menu class on scroll down
+.scroll-down {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: $dark-purple;
+  padding: 10px;
+  z-index: 99;
+  margin-top: 0;
+  transition: all 0.4s ease;
+  li {
+    padding-top: 10px;
+    a {
+      padding-bottom: 0;
+    }
+  }
+
+}
+/* ------------------------------------------------------------ *\
+|* ------------------------------------------------------------ *|
+|* 3D rolling links, idea from http://hakim.se/thoughts/rolling-links 
+|* ------------------------------------------------------------ *|
+\* ------------------------------------------------------------ */
+
+.cl-effect-2 a {
+  line-height: 44px;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  perspective: 1000px;
+}
+
+.cl-effect-2 a span {
+  position: relative;
+  display: inline-block;
+  padding: 0 14px;
+  background: $color-orange;
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+  -webkit-transform-origin: 50% 0;
+  -moz-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.csstransforms3d .cl-effect-2 a span::before {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: $color-orange;
+
+  content: attr(data-hover);
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  transition: background 0.3s;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  -webkit-transform-origin: 50% 0;
+  -moz-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+}
+
+.cl-effect-2 a:hover span,
+.cl-effect-2 a:focus span {
+  -webkit-transform: rotateX(90deg) translateY(-22px);
+  -moz-transform: rotateX(90deg) translateY(-22px);
+  transform: rotateX(90deg) translateY(-22px);
+}
+
+.csstransforms3d .cl-effect-2 a:hover span::before,
+.csstransforms3d .cl-effect-2 a:focus span::before {
+  background: $color-orange;  
+}
+
+/* ------------------------------------------------------------ *\
+|* ------------------------------------------------------------ *|
+|* MEDIA QUERIES 
+|* ------------------------------------------------------------ *|
+\* ------------------------------------------------------------ */
+@media(max-width: 840px) {
+  .item {
+    blockquote {
+      p{
+        font-size: 14px;
+      }
+    } 
+  }
+  .carousel {
+    a {
+      i {
+        &.fa-2x {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px)  {
+  h1 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  h4 {
+    font-size: 14px;
+  }
+  .icon-list {
+    font-size: 12px;
+    i {
+      margin-right: 14px;
+    }
+  }
+  .profile_picture {
+    &.margin-top-100 {
+      margin-top: 75px;
+    }
+  }
+  .social-media-icons {
+    li {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+  .filter-btns {
+   .nav-pills {
+    li {
+      a {
+        font-size: 14px;
+        margin-left: 18px;
+        margin-right: 18px;
+      }
+    } 
+  } 
+}
+#quote-carousel {
+  .carousel-indicators {
+    .active {
+      width: 75px;
+      height: 75px;
+    }
+    li {
+      width: 35px;
+      height: 35px;
+    }
+  }
+  .left, .right {
+    display: none;
+  }
+  .item {
+    blockquote {
+      padding: 5px 10px;
+      p {
+        font-size: 14px;
+      }      
+    }
+  }
+}
+#about_me p {
+  font-size: 14px;
+}
+}
+
+@media (max-width: 480px)  {
+  #expertness {
+    .col-xs-6 {
+      width: 100%;
+    }
+  }
+  #effect-5 {
+    .col-xs-6 {
+      width: 100%;
+    }
+  }
+}
+
+/*--------PRELOADER--------*/
+#preloader {
+  position: fixed;
+  z-index: 999;
+  background: white;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.social-networks {
+  padding-left: 0;
+  li {
+    display: inline-block;
+  }
+
+  a {
+    display: block;
+    position: relative;
+    margin: 0 7px;
+    width: 45px;
+    height: 45px;
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+    text-decoration: none;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      margin-top: -50%;
+      margin-left: -50%;
+      border-radius: 100px;
+      background-color: transparent;
+      border: 2px solid $white;
+      transition: all 400ms;
+    }
+
+    &:after {
+      position: relative;
+      display: block;
+      font-family: 'FontAwesome';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      color: #fff;
+      font-size: 20px;
+      line-height: 47px;
+    }
+
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+  }
+  
+  &.spin-icon a:hover:after, &.spin-icon a:focus:after {
+    transition: transform 0.4s ease-out;
+    transform: rotateZ(360deg);
+  }
+  $networks: linkedin '\f0e1' #0077b5, facebook '\f09a' #3b5998, twitter '\f099' #00b0ed,  instagram '\f16d' #3f729b, pinterest '\f231' #cc2127;
+  
+  @each $network in $networks {
+   .icon-#{nth($network, 1)} {
+     &:after {
+       content: '#{nth($network, 2)}';
+     }
+
+     &:hover:before, &:focus:before {
+      background: nth($network, 3);
+      border: 2px solid transparent;
+    }
+  }
+}
+}

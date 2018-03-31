@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700,300');
+
+$font-family-base: 'Raleway', Arial, Verdana, sans-serif;
+$font-open: 'Open Sans', sans-serif;
+
+// base colors
+$purple: #8e45ae;
+$dark-purple: darken(#8e45ae, 7%);
+
+// $purple: #8e45ae;
+// $green: #07cb79;
+// $red: #e83b35;
+// $lightblue: #07aaf5;
+// base colors end
+
+$white: #fff;
+$color-grey: #4d4d4d;
+$color-orange: #f5a623;
+$color-light-grey: #9b9b9b;
+$pink: #ffdfcd;
+
+$gradient_color_1: #FF5F6D;
+$gradient_color_2: #FFC371;
+
+// @include gradient-horizontal($gradient_color_2, $gradient_color_1, 0%, 100%);
+
+//== Pills
+$nav-pills-border-radius: 0;
+$nav-pills-active-link-hover-bg: transparent;
+$nav-pills-active-link-hover-color: $white;
+
+$link-color: $white;
+$link-hover-color: $white;
+$nav-link-hover-bg: transparent;
+
+html {
+  body {
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 700;
+    }
+    header {
+      h3 {
+        &.text-center {
+          font-weight: normal;
+        }
+      }
+    }
+    blockquote {
+      small {
+        font-weight: bold;
+        color: $white;
+      }
+    }
+  }
+}
+p {
+  font-family: $font-open;
+}
